@@ -1,0 +1,15 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <ul>
+            <b>The Users starts with<i>'{{ ltrsearch }}'</i></b><br><br>
+            {% for result in results %}
+                <br><li>{{ result }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+    </body>
+
+</html>

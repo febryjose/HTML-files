@@ -1,0 +1,9 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>succecfully deleted</p>
+        <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+    </body>
+</html>

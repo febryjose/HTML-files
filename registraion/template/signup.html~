@@ -1,0 +1,14 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1><u>Registration Page</u></h1>
+            <form action = "/signup/" method = "POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{reg_form.as_p}}
+            {{pro_form.as_p}}
+            <input type = "submit" value = "save" name = "btn1"><a href ='/login/'>Login Here</a>   
+            </form>
+        
+    <body>
+</html>    

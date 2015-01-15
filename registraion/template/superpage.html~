@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            a:link{
+                text-decoration:none
+           
+            }
+            .ui-widget{
+            width=250px;
+            float:left;
+            
+            }
+        </style>
+    </head>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        
+        
+        <script>
+        $(function(){
+            $("#search_box").autocomplete({
+            source:"/searchbox/",
+            minLength: 0,
+            
+            });
+            });
+                     
+        </script>
+
+    All Users Are Listed Below
+    <form method="POST" action="/delete/">
+        <ul>
+            {% for user in users %}
+                <li>{{ user }}</li>
+                
+            {% endfor %}
+
+        </ul>
+    </form>
+    <form method = "get" action = "/search/" >
+      <div class="ui-widget" style="width:250px, float:left"> 
+            <input id = "search_box" type = "text" name = "search_box" placeholder = "type first letter of name to Search..">
+      </div>
+      <button type = "submit">Submit</button>
+    </form>
+    
+    <div>
+        <form method = "get" action =" /delete/">
+            <input type = "text" name = "delete_box" placeholder = "Type username and press delete..." />
+            <input type = "submit" name = "delete" value = "Delete" />     
+        </form>
+    
+    </div>
+<a id = "logout" href = '/logout/'>LogOut Here</a>
+
+</html>  
+    
+      

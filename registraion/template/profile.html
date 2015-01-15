@@ -1,0 +1,82 @@
+<html>
+    <head>
+       <style>
+           #header{
+	       
+               float:right;
+               margin-top:-150px           
+               
+           } 
+  
+            #div_table{
+                margin-left:500px;
+                margin-top:180px;
+            
+            }
+            
+            
+            a{
+            text-decoration:None;
+            color:blue
+            }
+            h3{
+            float:left;
+            margin-top:-4px;
+            
+            }
+        </style>
+        
+      
+        
+        
+        
+        
+        
+    </head>
+    <body>
+        <div id="header">
+            
+            <h3>   {{user}}... &nbsp;&nbsp; </h3>
+             {% if request.user.is_superuser %}                
+                 <a href ="/superuser/"> User List |</a>
+             {% endif %}
+                                     
+             <a href = "/editpage/"> Edit your Details |</a>    
+             <a id = "logout" href = '/logout/'>LogOut Here </a>  
+        </div>
+           
+       <div id="div_table">
+         
+             <table  cellspacing="10">
+                 <tr>
+                     <td>Name :</td>
+                     <td>{{user}}</td>
+                 </tr>
+                 <tr>
+                     <td>Profile Image :</td>
+                     <td><img  class = "dg-picture-zoom" width = "50px" height = "50px" src = "{{pro_obj.profileimage.url}}">
+                 </tr>
+                 <tr>
+                     <td>E-mail :</td>
+                     <td>{{user.email}}</td>
+                 </tr>
+                 <tr>
+                     <td>Address :</td>
+                     <td>{{pro_obj.address}}</td>
+                 </tr>
+             </table>
+       </div>
+
+       
+           
+       
+       
+            
+       
+       
+           
+                
+       
+
+    </body>
+</html>

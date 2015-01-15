@@ -1,0 +1,40 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form method = "POST" action = "." enctype="multipart/form-data">
+        {% csrf_token %}
+        {{reg_obj.as_p}}
+        {{pro_obj.as_p}}
+        <!--<div id="div_table">
+            <table  cellspacing="10">
+                <tr>
+                    <td>Name</td>
+                    <td>{{reg_obj.username}}</td>
+                </tr>
+                    <tr>
+                        <td>Profile Image</td>
+                        <td>{{pro_obj.profileimage}}
+                       <img src = "{{obj.profileimage.url}}" width = "250px" height = "250px"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td>{{reg_obj.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>{{reg_obj.password}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>{{pro_obj.address}}</td>
+                    </tr>
+            </table>
+              
+        </div>-->
+        <input type = "submit" value = update action = "/profile/" /> 
+        </form>    
+        <a id = "logout" href = '/logout/'>LogOut Here</a>   
+    </body>
+</html>      

@@ -1,0 +1,9 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <p>Good Bye!!!!!!!!!!!!!!!!</p>
+        <a href = '{% url%}'>Login Here again</a>   
+    </body>
+</html>
